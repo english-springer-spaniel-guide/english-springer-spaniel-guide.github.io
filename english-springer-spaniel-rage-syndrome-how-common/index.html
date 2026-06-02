@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English Springer Spaniel Rage Syndrome How Common</title>
-<meta name="description" content="Customize your understanding — rage syndrome in English Springer Spaniels is one of the most misunderstood conditions. If you&#x27;re asking “english springer…">
+<title>How to Spot Springer Spaniel Rage Syndrome Early</title>
+<meta name="description" content="Discover the warning signs of rage syndrome in English Springer Spaniels. Learn what causes it and how to manage your dog's behavior effectively today." />
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://english-springer-spaniel-guide.github.io/english-springer-spaniel-rage-syndrome-how-common.html">
 <style>
@@ -89,12 +89,15 @@
 <section class="hero">
   <div class="hero-inner">
     <p>English Springer Spaniel owner notes</p>
-    <h1>English Springer Spaniel Rage Syndrome How Common</h1>
+    <h1>How to Spot Springer Spaniel Rage Syndrome Early</h1>
     <p class="lead">Customize your understanding — rage syndrome in English Springer Spaniels is one of the most misunderstood conditions. If you&#x27;re asking “english springer…</p>
   </div>
 </section>
 <div class="layout">
   <article class="article">
+    
+    
+    
     <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span><span aria-current="page">English Springer Spaniel Rage Syndrome How Common</span></nav>
     <p class="meta">Published: 2026-05-25 · English Springer Spaniel Guide</p>
     <article itemscope itemtype="https://schema.org/Article">
@@ -228,7 +231,7 @@ Here are three options for a Call to Action (CTA), ranging from empathetic to ur
       <input type="email" placeholder="Your email">
       <button>Get the notes</button>
     </section>
-
+    <section class="sidebar-panel"><h3>More English Springer Spaniel Articles</h3><ul><li><a href="/springer-spaniel-separation-anxiety-statistics.html">Springer Spaniel Separation Anxiety Statistics</a></li><li><a href="/springer-spaniel-grooming-schedule-ears.html">Springer Spaniel Grooming Schedule Ears</a></li></ul></section>
   </aside>
 </div>
 <footer class="footer">
@@ -237,5 +240,68 @@ Here are three options for a Call to Action (CTA), ranging from empathetic to ur
     <span><a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.html">Sitemap</a></span>
   </div>
 </footer>
+
+<script>
+(function() {
+  var _ga4 = "";
+  var _site = "english-springer-spaniel-guide.github.io";
+  var _article = "english-springer-spaniel-rage-syndrome-how-common";
+  var _startTime = Date.now();
+  var _scrollMarks = {25: false, 50: false, 75: false, 100: false};
+
+  function _send(name, params) {
+    var data = Object.assign({page: _article, site: _site}, params);
+    if (_ga4 && typeof gtag === "function") {
+      gtag("event", name, data);
+    }
+    try {
+      var log = JSON.parse(localStorage.getItem("_ptrack") || "[]");
+      log.push({t: new Date().toISOString(), e: name, d: data});
+      if (log.length > 200) log = log.slice(-200);
+      localStorage.setItem("_ptrack", JSON.stringify(log));
+    } catch(e) {}
+  }
+
+  // Scroll depth
+  function _onScroll() {
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.documentElement.scrollHeight;
+    var pct = Math.round((scrolled / total) * 100);
+    [25, 50, 75, 100].forEach(function(mark) {
+      if (!_scrollMarks[mark] && pct >= mark) {
+        _scrollMarks[mark] = true;
+        _send("scroll_depth", {depth: mark});
+      }
+    });
+  }
+  window.addEventListener("scroll", _onScroll, {passive: true});
+
+  // Time on page
+  function _sendTime() {
+    var secs = Math.round((Date.now() - _startTime) / 1000);
+    _send("time_on_page", {seconds: secs});
+  }
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) _sendTime();
+  });
+  window.addEventListener("pagehide", _sendTime);
+
+  // Newsletter CTA
+  document.addEventListener("click", function(e) {
+    var btn = e.target.closest("button");
+    if (btn) {
+      var box = btn.closest(".sidebar-newsletter, [class*='newsletter']");
+      if (box) _send("newsletter_click", {label: btn.textContent.trim().slice(0, 40)});
+    }
+    var link = e.target.closest("a[href]");
+    if (link && !link.href.includes(window.location.hostname)) {
+      _send("outbound_click", {url: link.href.slice(0, 100)});
+    }
+  });
+
+  // Pageview
+  _send("article_view", {});
+})();
+</script>
 </body>
 </html>
