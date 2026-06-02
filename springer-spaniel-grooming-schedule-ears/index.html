@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Springer Spaniel Grooming Schedule Ears</title>
-<meta name="description" content="You are not alone. Many new spaniel owners feel a knot of self-doubt the first time they look at those beautiful, feathery ears. Am I cleaning too much? Too…">
+<title>Springer Spaniel Ear Care: The Grooming Mistake Costing You</title>
+<meta name="description" content="Most owners ignore spaniel ears until infection strikes. Learn the proven grooming schedule that prevents costly vet bills and keeps ears healthy." />
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://english-springer-spaniel-guide.github.io/springer-spaniel-grooming-schedule-ears.html">
 <style>
@@ -89,12 +89,13 @@
 <section class="hero">
   <div class="hero-inner">
     <p>English Springer Spaniel owner notes</p>
-    <h1>Springer Spaniel Grooming Schedule Ears</h1>
+    <h1>Springer Spaniel Ear Care: The Grooming Mistake Costing You</h1>
     <p class="lead">You are not alone. Many new spaniel owners feel a knot of self-doubt the first time they look at those beautiful, feathery ears. Am I cleaning too much? Too…</p>
   </div>
 </section>
 <div class="layout">
   <article class="article">
+    
     <nav class="article-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>›</span><a href="/blog.html">Blog</a><span>›</span><span aria-current="page">Springer Spaniel Grooming Schedule Ears</span></nav>
     <p class="meta">Published: 2026-05-27 · English Springer Spaniel Guide</p>
     <p><strong>You are not alone.</strong> Many new spaniel owners feel a knot of self-doubt the first time they look at those beautiful, feathery ears. <em>Am I cleaning too much? Too little? What if I hurt her?</em> This is the classic voice of Imposter Syndrome — and we are here to tell you: <strong>you belong here</strong>, and you already have what it takes. This guide validates your concerns and gives you a clear, capable springer spaniel grooming schedule ears system.</p>
@@ -176,7 +177,7 @@
       <input type="email" placeholder="Your email">
       <button>Get the notes</button>
     </section>
-<section class="sidebar-panel"><h3>More English Springer Spaniel Articles</h3><ul><li><a href="/springer-spaniel-separation-anxiety-statistics.html">Springer Spaniel Separation Anxiety Statistics</a></li><li><a href="/english-springer-spaniel-rage-syndrome-how-common.html">English Springer Spaniel Rage Syndrome How Common</a></li></ul></section>
+    <section class="sidebar-panel"><h3>More English Springer Spaniel Articles</h3><ul><li><a href="/english-springer-spaniel-rage-syndrome-how-common.html">English Springer Spaniel Rage Syndrome: How Common Is It and What Data Exists?</a></li><li><a href="/springer-spaniel-separation-anxiety-statistics.html">Springer Spaniel Separation Anxiety Statistics</a></li></ul></section>
   </aside>
 </div>
 <footer class="footer">
@@ -185,5 +186,68 @@
     <span><a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a> · <a href="/sitemap.html">Sitemap</a></span>
   </div>
 </footer>
+
+<script>
+(function() {
+  var _ga4 = "";
+  var _site = "english-springer-spaniel-guide.github.io";
+  var _article = "springer-spaniel-grooming-schedule-ears";
+  var _startTime = Date.now();
+  var _scrollMarks = {25: false, 50: false, 75: false, 100: false};
+
+  function _send(name, params) {
+    var data = Object.assign({page: _article, site: _site}, params);
+    if (_ga4 && typeof gtag === "function") {
+      gtag("event", name, data);
+    }
+    try {
+      var log = JSON.parse(localStorage.getItem("_ptrack") || "[]");
+      log.push({t: new Date().toISOString(), e: name, d: data});
+      if (log.length > 200) log = log.slice(-200);
+      localStorage.setItem("_ptrack", JSON.stringify(log));
+    } catch(e) {}
+  }
+
+  // Scroll depth
+  function _onScroll() {
+    var scrolled = window.scrollY + window.innerHeight;
+    var total = document.documentElement.scrollHeight;
+    var pct = Math.round((scrolled / total) * 100);
+    [25, 50, 75, 100].forEach(function(mark) {
+      if (!_scrollMarks[mark] && pct >= mark) {
+        _scrollMarks[mark] = true;
+        _send("scroll_depth", {depth: mark});
+      }
+    });
+  }
+  window.addEventListener("scroll", _onScroll, {passive: true});
+
+  // Time on page
+  function _sendTime() {
+    var secs = Math.round((Date.now() - _startTime) / 1000);
+    _send("time_on_page", {seconds: secs});
+  }
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) _sendTime();
+  });
+  window.addEventListener("pagehide", _sendTime);
+
+  // Newsletter CTA
+  document.addEventListener("click", function(e) {
+    var btn = e.target.closest("button");
+    if (btn) {
+      var box = btn.closest(".sidebar-newsletter, [class*='newsletter']");
+      if (box) _send("newsletter_click", {label: btn.textContent.trim().slice(0, 40)});
+    }
+    var link = e.target.closest("a[href]");
+    if (link && !link.href.includes(window.location.hostname)) {
+      _send("outbound_click", {url: link.href.slice(0, 100)});
+    }
+  });
+
+  // Pageview
+  _send("article_view", {});
+})();
+</script>
 </body>
 </html>
